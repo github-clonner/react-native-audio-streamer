@@ -1,11 +1,3 @@
-//
-//  RNAudioStreamer.m
-//  RNAudioStreamer
-//
-//  Created by Victor Chan on 29/11/2016.
-//  Copyright © 2016 Victor Chan. All rights reserved.
-//
-
 #import "RNAudioStreamer.h"
 #import "DOUAudioStreamer.h"
 #import "RNAudioFileURL.h"
@@ -107,6 +99,11 @@ RCT_EXPORT_METHOD(status:(RCTResponseSenderBlock)callback){
 - (void)statusChanged {
     [self.bridge.eventDispatcher sendDeviceEventWithName:@"RNAudioStreamerStatusChanged"
                                                     body: _player ? [self rnStatusFromDouStatus] : STOPPED];
+
+    if ( _player && _player.fileProvider && _player.fileProvider.finished && _player.cachedPath ) {
+        [self.bridge.eventDispatcher sendDeviceEventWithName:@"RNAudioStreamerDownloadedFile"
+                                                        body: _player.cachedPath];
+    }
 }
 
 - (NSString *)rnStatusFromDouStatus {

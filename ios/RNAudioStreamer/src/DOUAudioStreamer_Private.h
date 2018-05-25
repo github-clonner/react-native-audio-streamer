@@ -16,7 +16,7 @@
 
 #import "DOUAudioStreamer.h"
 
-@class DOUAudioFileProvider;
+/* @class DOUAudioFileProvider; */
 @class DOUAudioPlaybackItem;
 @class DOUAudioDecoder;
 
@@ -28,7 +28,7 @@
 @property (nonatomic, assign) NSTimeInterval duration;
 @property (nonatomic, assign) NSInteger timingOffset;
 
-@property (nonatomic, readonly) DOUAudioFileProvider *fileProvider;
+/* @property (nonatomic, readonly) DOUAudioFileProvider *fileProvider; */
 @property (nonatomic, strong) DOUAudioPlaybackItem *playbackItem;
 @property (nonatomic, strong) DOUAudioDecoder *decoder;
 

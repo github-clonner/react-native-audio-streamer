@@ -17,6 +17,7 @@
 #import <Foundation/Foundation.h>
 #import "DOUAudioBase.h"
 #import "DOUAudioFile.h"
+#import "DOUAudioFileProvider.h"
 #import "DOUAudioFilePreprocessor.h"
 #import "DOUAudioAnalyzer+Default.h"
 
@@ -50,6 +51,7 @@ typedef NS_ENUM(NSInteger, DOUAudioStreamerErrorCode) {
 + (void)setHintWithAudioFile:(id <DOUAudioFile>)audioFile;
 
 @property (assign, readonly) DOUAudioStreamerStatus status;
+@property (nonatomic, readonly) DOUAudioFileProvider *fileProvider;
 @property (strong, readonly) NSError *error;
 
 @property (nonatomic, readonly) id <DOUAudioFile> audioFile;

@@ -10,9 +10,9 @@ Android streaming is based on [ExoPlayer](https://github.com/google/ExoPlayer)
 
 `npm install react-native-audio-streamer --save`
 
-** For react-native version < 0.40.0 install react-native-audio-streamer@0.0.9 **
+** For react-native version < 0.50.0 install react-native-audio-streamer@0.0.11 **
 
-`npm install react-native-audio-streamer@0.0.9 --save`
+`npm install react-native-audio-streamer@0.0.11 --save`
 
 Then run the following command to link to iOS & Android project
 
